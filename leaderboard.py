@@ -19,10 +19,14 @@ def load_leaderboard(file_name, leader_names, leader_scores):
     index = 0
 
     # TODO 1: use a while loop to read the leader name from the line (format is "leader_name,leader_score")
-
+    while (line[index] != ","):
+      leader_name = leader_name + line[index] 
+      index = index + 1
+    print(leader_name)
+      
 
     # TODO 2: add the leader name to the list
-
+    leader_names.append(leader_name)
     
     # TODO 3: read the player score using a similar loop
 
@@ -31,6 +35,9 @@ def load_leaderboard(file_name, leader_names, leader_scores):
 
 
   leaderboard_file.close()
+
+load_leaderboard("a122_leaderboard.txt",[],[])
+
 
 
 # update leaderboard by inserting the current player and score to the list at the correct position
