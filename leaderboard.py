@@ -29,10 +29,14 @@ def load_leaderboard(file_name, leader_names, leader_scores):
     leader_names.append(leader_name)
     
     # TODO 3: read the player score using a similar loop
-
+    index = index + 1
+    while (line[index] != "\n"):
+      leader_score = leader_score + line[index]
+      index = index + 1
+    print(leader_score)
     
     # TODO 4: add the player score to the list
-
+    leader_scores.append(int(leader_score))
 
   leaderboard_file.close()
 

@@ -1,3 +1,3 @@
-sally,90
+sally,14
 jake,34
-sam,10
+sam,8
