@@ -49,19 +49,22 @@ def update_leaderboard(file_name, leader_names, leader_scores, player_name, play
 
   leader_index = 0
   # TODO 5: loop through all the scores in the existing leaderboard list
-  '''
-    while ():
+  
+  while (leader_index < len(leader_scores)):
     # TODO 6: check if this is the position to insert new score at
-    if ():
+    if (player_score > leader_scores[leader_index]):
       break
     else:
       leader_index = leader_index + 1
-  '''
+  
   # TODO 7: insert the new player and score at the appropriate position
-
+  leader_names.insert(leader_index, player_name)
+  leader_scores.insert(leader_index, player_score)
 
   # TODO 8: keep both lists at 5 elements only (top 5 players)
-
+  if (len(leader_names)>5):
+    leader_names.pop()
+    leader_scores.pop()
   
   # store the latest leaderboard back in the file
   leaderboard_file = open(file_name, "w")  # this mode opens the file and erases its contents for a fresh start
@@ -72,7 +75,12 @@ def update_leaderboard(file_name, leader_names, leader_scores, player_name, play
     leaderboard_file.write(leader_names[leader_index] + "," + str(leader_scores[leader_index]) + "\n")
     leader_index = leader_index + 1
   '''
+  
+  print(leader_names)
+  print(leader_scores)
   leaderboard_file.close()
+
+update_leaderboard("a122_leaderboard.txt", ["bob", "john", "beth"], [10, 6, 2], "jazz", 8)
   
 
 # draw leaderboard and display a message to player
