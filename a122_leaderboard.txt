@@ -1,3 +1,5 @@
-sally,14
-jake,34
-sam,8
+bob,10
+jazz,8
+grace,8
+john,6
+beth,2

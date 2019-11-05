@@ -22,7 +22,7 @@ def load_leaderboard(file_name, leader_names, leader_scores):
     while (line[index] != ","):
       leader_name = leader_name + line[index] 
       index = index + 1
-    print(leader_name)
+    #print(leader_name)
       
 
     # TODO 2: add the leader name to the list
@@ -33,7 +33,7 @@ def load_leaderboard(file_name, leader_names, leader_scores):
     while (line[index] != "\n"):
       leader_score = leader_score + line[index]
       index = index + 1
-    print(leader_score)
+    #print(leader_score)
     
     # TODO 4: add the player score to the list
     leader_scores.append(int(leader_score))
@@ -70,14 +70,14 @@ def update_leaderboard(file_name, leader_names, leader_scores, player_name, play
   leaderboard_file = open(file_name, "w")  # this mode opens the file and erases its contents for a fresh start
   leader_index = 0
   # TODO 9: loop through all the leaderboard elements and write them to the file
-  '''
-    while ():
+  
+  while (leader_index < len(leader_names)):
     leaderboard_file.write(leader_names[leader_index] + "," + str(leader_scores[leader_index]) + "\n")
     leader_index = leader_index + 1
-  '''
   
-  print(leader_names)
-  print(leader_scores)
+  
+  # print(leader_names)
+  # print(leader_scores)
   leaderboard_file.close()
 
 update_leaderboard("a122_leaderboard.txt", ["bob", "john", "beth"], [10, 6, 2], "jazz", 8)
