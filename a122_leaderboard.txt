@@ -1,5 +1,5 @@
 bob,10
+jk,10
 jazz,8
-grace,8
 john,6
 beth,2
